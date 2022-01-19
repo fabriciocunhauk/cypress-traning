@@ -5,7 +5,7 @@ describe("Locate elements in a page", () => {
         cy.visit("/elements")
     })
 
-    it("should locate elements in the elements page", () => {
+    it("Should locate elements in the elements page using get", () => {
 
         //Best way to locate by using (data attribute)
 
@@ -40,5 +40,20 @@ describe("Locate elements in a page", () => {
 
         // Get all elements by tag name, class and type
         cy.get("button.Elements-btn[type='submit']")
+    })
+
+    it("Should locate elements with contains", () => {
+
+        // Get element by text only get first match
+        cy.contains("Unique Text")
+        cy.contains("Not Unique Text")
+
+        // Get element with selector
+        cy.contains("[type='submit']", "Not Unique Text")
+        cy.contains("form", "Not Unique Text")
+
+        cy.get("[type='submit']").contains("Not Unique Text")
+
+        
     })
 })
