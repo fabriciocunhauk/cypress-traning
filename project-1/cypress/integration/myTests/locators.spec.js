@@ -52,8 +52,13 @@ describe("Locate elements in a page", () => {
         cy.contains("[type='submit']", "Not Unique Text")
         cy.contains("form", "Not Unique Text")
 
-        cy.get("[type='submit']").contains("Not Unique Text")
+        cy.get("[type='submit']").contains("Not Unique Text")        
+    })
 
-        
+    it("Should locate elements with find", () => {
+
+        // Get child element in a parent element
+        cy.get("#form-1").find(".btn-1")
+        cy.get("#form-1").find(".btn-2")
     })
 })
