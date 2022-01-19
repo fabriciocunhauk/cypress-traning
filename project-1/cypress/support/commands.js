@@ -23,3 +23,9 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+// Example of custom command
+
+Cypress.Commands.add("getByTestId", (testId) => {
+    cy.get(`[data-cy='${testId}']`)
+})
