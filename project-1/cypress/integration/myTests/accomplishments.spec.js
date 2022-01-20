@@ -8,22 +8,22 @@ describe("Accomplishments dashboard", () => {
     })
 
     it("Should showcase error if information is missing", () => {
-        cy.get("[data-cy='accomplishment-title-input']").type("My Bascketball Accomplishment")
+        cy.get("[data-cy='accomplishment-title-input']").type("My Basketball Accomplishment")
         cy.get("[data-cy='accomplishment-input']").type("I made 10 points")
         cy.contains("Submit Accomplishment").click()
         cy.contains("Complete the items above to continue").should("be.visible")
     })
 
-    it("Should display validation component if all information is inputed", () => {
-        cy.get("[data-cy='accomplishment-title-input']").type("My Bascketball Accomplishment")
+    it("Should display validation component if all information is inputted", () => {
+        cy.get("[data-cy='accomplishment-title-input']").type("My Basketball Accomplishment")
         cy.get("[data-cy='accomplishment-input']").type("I made 10 points")
         cy.get("[type='checkbox']").click()
         cy.contains("Submit Accomplishment").click()
         cy.contains("This Accomplishment was Successfully Submitted").should("be.visible")
     })
 
-    it("Should return back to accomplishment dashbord with empty inputs when go back button is clicked", () => {
-        cy.get("[data-cy='accomplishment-title-input']").type("My Bascketball Accomplishment")
+    it("Should return back to accomplishment dashboard with empty inputs when go back button is clicked", () => {
+        cy.get("[data-cy='accomplishment-title-input']").type("My Basketball Accomplishment")
         cy.get("[data-cy='accomplishment-input']").type("I made 10 points")
         cy.get("[type='checkbox']").click()
         cy.contains("Submit Accomplishment").click()

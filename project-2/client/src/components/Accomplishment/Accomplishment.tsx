@@ -90,8 +90,8 @@ function Accomplishment() {
                     (showSuccess) && (
                         <div>
                             <div className="Accomplishment-spinner-container">
-                                <img src={confetti} className="Accomplishment-img"/> 
-                                <h1>This Accomplisment was Successfully Submitted</h1> 
+                                <img src={confetti} className="Accomplishment-img" alt=""/> 
+                                <h1>This Accomplishment was Successfully Submitted</h1> 
                             </div>
                             <button className="Accomplishment-btn" onClick={() => {
                                 setShowSuccess(false);
