@@ -1,3 +1,5 @@
+/*global someFunction, cy*/
+/*eslint no-undef: "error"*/
 /// <reference types="cypress" />
 
 describe("Locate elements in a page", () => {
